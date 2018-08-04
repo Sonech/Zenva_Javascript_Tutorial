@@ -1,2 +1,7 @@
 # Zenva_Javascript_Tutorial
-Zenva Javascript Tutorial
+Arithmetic operations
+
+- Hours to second
+- Celsius to Fahrenheit
+
+
