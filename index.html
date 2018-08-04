@@ -1,0 +1,28 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+		<title></title>
+	</header>
+		<body>
+			Hello World
+			<script>
+				var text = 'Hello';
+
+				function decorate(t) {
+					return '####----' + t + '----####';
+				}
+				
+				console.log(decorate(text));
+				console.log(text);
+				console.log(decorate('yooo'));
+
+				function decorateMore(t) {
+					var a = decorate(t);
+					return '(((' + a + ')))';
+				}
+				
+				console.log(decorateMore('Courses'));
+
+			</script>
+		</body>
+</html>
