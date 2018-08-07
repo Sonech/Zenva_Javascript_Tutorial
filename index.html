@@ -1,0 +1,29 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+	<title></title>
+	</header>
+		<body>
+			Hello World
+			<script>
+				var list = [1, 2, 3, 4, 5, 6];
+				console.log(list);
+
+				// Fist parameter is index. Second parameter is how many elements to remove. Third parameter and onwards is all the elemtents to be added to the array in the specified index.
+				list.splice(2, 0, 10, 20, 30);
+				console.log(list);
+
+				// Remove elements from an index position
+				list.splice(2, 3);
+				console.log(list);
+
+				// Remove elements from an index position and add new elements from the position
+				list.splice(3, 2, 100, 200)
+				console.log(list);
+
+				// Backwards index positions are defined with -
+				list.splice(-2, 1);
+				console.log(list);
+			</script>
+		</body>
+</html>
