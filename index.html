@@ -1,0 +1,35 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+	<title></title>
+	</header>
+		<body>
+			Hello World
+			<script>
+				var user = {
+					name: 'Peter',
+					score: 100,
+					country: 'Chile',
+					pets: ['pet1', 'pet2', 'et'],
+					profile: {
+						type: 'private',
+						account: 'premium'
+					}
+				};
+
+				// Check if property exist in object
+				if ('profile' in user) {
+					console.log('the user has a profile');
+				}
+
+				console.log(user.photo);
+				console.log(user['photo']);
+
+				// Will only run with !
+				if (!user.photo) {
+					console.log('photo is not present!');
+				}
+
+			</script>
+		</body>
+</html>
