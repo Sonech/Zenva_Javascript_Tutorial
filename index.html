@@ -1,0 +1,31 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+		<title></title>
+	</header>
+		<body>
+			Hello World
+			<script>
+				// Example 1 of deining an array
+				var list = [10, 100, 'asdf', true, 100];
+
+				console.log(list);
+
+				// Example 2 of defining an array
+				var list2 = new Array(10, 100, 'asdf', true, 100)
+
+				console.log(list2);
+
+				// Accessing elements from an array
+				var a = list2[2];
+				console.log(a);
+
+				// Changing elements in the array
+				list2[3] = false;
+				console.log(list2);
+
+				// Accessing elements that does not exist in the array gives 'undefined' result
+				console.log(list2[100]);
+			</script>
+		</body>
+</html>
