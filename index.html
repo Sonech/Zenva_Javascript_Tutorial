@@ -1,0 +1,27 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+	<title></title>
+	</header>
+		<body>
+			Hello World
+			<script>
+				// Example 1 of creating an object
+				//var a = new Object();
+				var a = {};
+				console.log(a);
+
+				a.name = 'Your Name';
+				a.age = 100;
+				a.city = 'Santiago';
+				a.friends = ['A', 'B', 'C'];
+				a.someMethod = function(x, y) {
+					return x + y;
+				} 
+				console.log(a.city);
+				console.log(a['city']);
+				console.log(a.someMethod(1, 2));
+
+			</script>
+		</body>
+</html>
