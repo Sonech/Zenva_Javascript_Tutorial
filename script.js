@@ -53,7 +53,7 @@ window.addEventListener('load', function() {
 		var hobbyField = document.getElementById('hobby');
 		// Get hobby value
 		var hobby = hobbyField.value;
-		console.log(hobby);
+		
 
 		// Get gender field
 		var genderField = document.getElementById('gender');
@@ -61,21 +61,26 @@ window.addEventListener('load', function() {
 		var s = genderField.selectedIndex;
 		// Get gender value from option index
 		var gender = genderField.options[s].value;
-		console.log(gender);
-
-
 		
 		var resultsHtml = '';
 		
 		var usersLength = users.length;
 		for(var i = 0; i < usersLength; i++) {
-			// resultsHtml = resultsHtml + ' ' + users[i].name;
-			resultsHtml += '<div class="person-row">\
+			// If gender is 'All' or if gender is the same as users from index
+			if (gender == 'A' || gender == users[i].gender) {
+				// If hobby is not specified or if hobby is the same as users from index
+				if (hobby == '' || hobby == users[i].hobby) {
+					// resultsHtml = resultsHtml + ' ' + users[i].name;
+					resultsHtml += '<div class="person-row">\
 						<img src="images/' + users[i].avatar + '"/>\
 						<div class="person-info">\
 							<div>' + users[i].name + '</div>\
 							<div>' + users[i].hobby + '</div></div>\
 						<button>Add as friend</button></div>';
+				}
+			}
+
+			
 		}
 
 		// Can be string or HTML
