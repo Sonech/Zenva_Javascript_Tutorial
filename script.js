@@ -1,4 +1,47 @@
-// Access window object and listen to the 'load event'. When the load event is triggered, do something.
+var users = [
+	{
+		name: 'Lucy',
+		gender: 'F',
+		hobby: 'pets',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Betty',
+		gender: 'F',
+		hobby: 'pets',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Ronald',
+		gender: 'M',
+		hobby: 'music',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Christopher',
+		gender: 'M',
+		hobby: 'sports',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Ximena',
+		gender: 'F',
+		hobby: 'reading',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Paul',
+		gender: 'M',
+		hobby: 'shopping',
+		avatar: 'avatar1.png'
+	},
+	{
+		name: 'Charlie',
+		gender: 'M',
+		hobby: 'pets',
+		avatar: 'avatar1.png'
+	},
+];
 // First parameter is the event we listen to. Second parameter is the function to be executed when the event is loaded.
 // The following event is to ensure that the DOMs are loaded in the page, so that we can access it.
 window.addEventListener('load', function() {
@@ -21,10 +64,18 @@ window.addEventListener('load', function() {
 		console.log(gender);
 
 
-		console.log('Im searching!');
+		
+		var resultsHtml = '';
+		
+		var usersLength = users.length;
+		for(var i = 0; i < usersLength; i++) {
+			// resultsHtml = resultsHtml + ' ' + users[i].name;
+			resultsHtml += ' ' + users[i].name;
+		}
+
 		// Can be string or HTML
-		results.innerHTML = '<div style="color:red;">hello</div>world<br/>new line<div class="person-row">some stuff</div>';
-		console.log(results.innerHTML)
+		results.innerHTML = resultsHtml;
+		
 		}
 
 	// Access search button object
