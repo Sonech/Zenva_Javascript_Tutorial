@@ -70,7 +70,12 @@ window.addEventListener('load', function() {
 		var usersLength = users.length;
 		for(var i = 0; i < usersLength; i++) {
 			// resultsHtml = resultsHtml + ' ' + users[i].name;
-			resultsHtml += ' ' + users[i].name;
+			resultsHtml += '<div class="person-row">\
+						<img src="images/' + users[i].avatar + '"/>\
+						<div class="person-info">\
+							<div>' + users[i].name + '</div>\
+							<div>' + users[i].hobby + '</div></div>\
+						<button>Add as friend</button></div>';
 		}
 
 		// Can be string or HTML
